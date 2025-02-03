@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yesika Maharani</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Menyusun elemen secara vertikal */
+            justify-content: center; /* Memastikan konten berada di tengah vertikal */
+            align-items: center; /* Memastikan konten berada di tengah horizontal */
+            height: 100vh;
+            margin: 0;
+            background-color: #ffc0cb; /* Latar belakang warna pink */
+            font-family: 'Arial', sans-serif;
+            text-align: center; /* Membuat teks berada di tengah */
+            padding: 0 10px; /* Memberikan sedikit ruang pada sisi layar */
+        }
+
+        .text-container {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 3s forwards, moveUp 2s forwards;
+        }
+
+        .extra-text {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px; /* Memberikan jarak antara kalimat pertama dan kedua */
+            opacity: 0;
+            animation: fadeIn 3s forwards, moveUp 2s 5s forwards;
+        }
+
+        .video-container {
+            margin-top: 40px; /* Memberikan jarak antara video dan teks */
+            width: 100%; /* Membuat video responsif */
+            max-width: 600px; /* Maksimal lebar video */
+            height: auto;
+            opacity: 0;
+            animation: fadeIn 3s forwards, moveUp 2s 7s forwards; /* Video muncul setelah 7 detik */
+        }
+
+        /* Animasi Fade-in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Animasi untuk membuat teks bergerak ke atas */
+        @keyframes moveUp {
+            0% { transform: translateY(30px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        Yesika sudah makan malam hari ini?
+    </div>
+    <div class="extra-text">
+        Jangan lupa makan dan tidur yang cukup, yaaa
+    </div>
+    <div class="extra-text">
+        Semoga kamu sehat selalu!
+    </div>
+    <!-- Video yang akan diputar -->
+    <div class="video-container">
+        <video width="50%" height="auto" controls>
+            <source src="mpus.mp4" type="video/mp4">
+            Browser Anda tidak mendukung elemen video.
+        </video>
+    </div>
+</body>
+</html>
